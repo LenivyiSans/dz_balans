@@ -1,0 +1,67 @@
+[
+  {
+    "model": "balance.balancearticle",
+    "pk": 1,
+    "fields": {
+      "name": "Денежные средства"
+    }
+  },
+  {
+    "model": "balance.balancearticle",
+    "pk": 2,
+    "fields": {
+      "name": "Обязательства"
+    }
+  },
+  {
+    "model": "balance.balancegroup",
+    "pk": 1,
+    "fields": {
+      "name": "Касса",
+      "article": 1
+    }
+  },
+  {
+    "model": "balance.balancegroup",
+    "pk": 2,
+    "fields": {
+      "name": "Счета клиентов",
+      "article": 2
+    }
+  },
+  {
+    "model": "balance.account",
+    "pk": 1,
+    "fields": {
+      "number": "1000000001",
+      "name": "Касса",
+      "account_type": "asset",
+      "balance_group": 1,
+      "balance": "5000.00"
+    }
+  },
+  {
+    "model": "balance.account",
+    "pk": 2,
+    "fields": {
+      "number": "2000000001",
+      "name": "Счета клиентов",
+      "account_type": "liability",
+      "balance_group": 2,
+      "balance": "3000.00"
+    }
+  },
+  {
+    "model": "balance.transaction",
+    "pk": 1,
+    "fields": {
+      "description": "Пополнение кассы от клиента",
+      "amount": "1000.00",
+      "date": "2025-07-09T08:00:00Z",
+      "debit_account": 1,
+      "credit_account": 2,
+      "reversed_transaction": null,
+      "is_annulled": false
+    }
+  }
+]
